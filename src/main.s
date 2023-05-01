@@ -10,6 +10,8 @@ main:
 	mov es, ax
 
 
+	mov ss, ax
+	mov sp, 0X7C00
 
 times 510-($-$$) db 0
 dw 0AA55h
