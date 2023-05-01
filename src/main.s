@@ -5,7 +5,11 @@ _start:
 	jmp main
 
 main:
-	hlt
+	mov ax, 0x0
+	mov ds, ax
+	mov es, ax
+
+
 
 times 510-($-$$) db 0
 dw 0AA55h

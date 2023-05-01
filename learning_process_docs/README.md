@@ -26,3 +26,22 @@ Firmware is different from other types of software, such as operating systems or
 - BIOS check for 0XAA55 signature
 - if found, it starts execuring code
 ```
+
+
+#### Memory segmentaion
+
+````
+in "real mode" the registers are limited to 16 bits for addressing but 8086
+has 20 bit bus so intel engineers invent a way to address with 20 bits
+
+physical_address = (A * 0x10) + B
+
+A: called base register
+B: is offset register
+
+and by default depending on the instruction A will be different
+for example for move implicit will use ds (data segment register)
+
+and BIOS by default will set CS register (code segment) to 0
+but the others not so we need to set them ourselves
+````
