@@ -19,3 +19,10 @@ with in hardware device it is specific type of software that is desinged to cont
 
 Firmware is different from other types of software, such as operating systems or applications, because it is typically tightly integrated with the hardware of a device. It is usually provided by the manufacturer of the hardware and is designed specifically for that device or system.
 ```
+
+##### How the BIOS finds an OS
+```
+- BIOS loads first sector of each bootable device into memory (at location 0x7C00)
+- BIOS check for 0XAA55 signature
+- if found, it starts execuring code
+```
